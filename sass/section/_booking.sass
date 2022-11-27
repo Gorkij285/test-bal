@@ -1,0 +1,132 @@
+.booking
+    display: flex
+    justify-content: center
+    background: linear-gradient(0deg, rgba(161,79,3,1) 0%, rgba(252,231,184,1) 100%)
+.order
+    position: relative
+    margin: 10rem
+    width: 114rem
+    height: 50rem
+    background: linear-gradient(108deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.8046568969384629) 53%, rgba(186,133,84,0.8018557764902836) 53%, rgba(161,79,3,0.45) 100%), url(../img/девушка.jpg) center / cover no-repeat
+    border-box: hidden
+    border-radius: 1rem
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+    &__form
+        display: flex
+        flex-direction: column
+        padding-top: 3rem
+        width: 60%
+        p
+            
+            color: #A14F03
+            font-size: 3.6rem
+            text-align: center
+            text-shadow: 0px 2px 2px #969696
+            letter-spacing: 1rem
+            text-transform: uppercase
+
+input
+    width: 35rem
+    height: 5.5rem
+    color: #020202
+    border: none
+    border-bottom: .2rem #D76363 solid transparent
+    border-radius: 0.5rem
+    width: 55%
+    margin-left: 5rem
+
+    &:nth-child(1)
+        //margin-bottom: 5rem
+    &:focus
+       outline: none 
+       border-bottom: .2rem #158b37 solid
+       box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+    &:focus:invalid
+        border-bottom: .2rem #D76363 solid
+    &:placeholder-shown + .form__label
+        opacity: 0
+        visibility: hidden
+
+        
+        
+
+.form
+    &__label
+        display: block
+        margin: 1rem 0rem 2rem 6rem
+        color: #494242
+        transition: 0.7s all
+    &__label-radio
+        position: relative
+        color: #494242
+        font-size: 1.6rem
+        cursor: pointer
+        padding-left: 1.5rem
+        &:last-child
+            margin: 0
+
+    &__group-radio
+        display: inline-block
+        width: 40%
+        
+.fnp
+    height: 3rem
+    width: 3rem
+    display: none
+
+
+.fnp-2
+    height: 3rem
+    width: 3rem
+    margin: 0
+    display: none
+
+
+.span-bookong
+    height: 2.8rem
+    width: 2.8rem
+    border-radius: 50%
+    border: 0.5rem solid $brown-color-darck
+    display: block
+    position: absolute
+    
+    left: -4.1rem
+    top: -2.05rem
+    &::after
+        content: ""
+        display: block
+        height: 1.5rem
+        width: 1.5rem
+        border-radius: 50%
+        background-color: $brown-color-darck
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        opacity: 0
+        transition: 0.3s all
+.fnp:checked ~ .form__label-radio .span-bookong::after
+    opacity: 1
+.fnp-2:checked ~ .form__label-radio .span-bookong::after
+    opacity: 1
+
+
+.form__group
+    &:last-child
+        margin-left: 9rem
+
+
+
+.btn-booking
+    margin-top: 4rem
+    &::after
+        content: ""
+        background: $brown-color-light
+
+
+.btn-booking:link, .btn-booking:visited
+        padding: 2rem 0rem 2rem 0rem
+        font-size: 2rem
+        background: $brown-color-darck
+        color: #fff
+        
